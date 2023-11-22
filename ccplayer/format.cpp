@@ -25,13 +25,21 @@ format::format(const char *localPath){
         auto parm = stream->codecpar;
         if(parm->codec_type == AVMEDIA_TYPE_VIDEO){
             av_dump_format(ctx, i, localPath, 0);
+            try{
+                m_video_codec.config(parm->codec_id,parm);
+            }catch(error){
+                continue;
+            }
             m_video_index = i;
-            m_video_codec.config(parm->codec_id,parm);
         }
         if(parm->codec_type == AVMEDIA_TYPE_AUDIO){
             av_dump_format(ctx, i, localPath, 0);
+            try {
+                m_audio_codec.config(parm->codec_id,parm);
+            } catch (error) {
+                continue;;
+            }
             m_audio_index = i;
-            m_audio_codec.config(parm->codec_id,parm);
         }
     }
 }
@@ -107,7 +115,6 @@ AVPacket* format::read(){
     if(err == 0){
         return packet;
     }
-    av_packet_free(&packet);
     throw error(err);
     
 }

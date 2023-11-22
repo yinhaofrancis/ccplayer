@@ -140,7 +140,7 @@ void video_display::render(AVFrame* frame){
     load_program();
     
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glClearColor(1,1,1,1);
+    glClearColor(0,0,0,0);
     glViewport(0, 0, m_screen_w, m_screen_h);
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);

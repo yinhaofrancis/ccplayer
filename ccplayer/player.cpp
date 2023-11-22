@@ -65,9 +65,10 @@ void player::read_packet(runner<player,true>& r){
             auto packet = m_format.read();
             if(packet->stream_index == m_format.video_index()){
                 m_queue_video_packet.enqueue(packet);
-            }
-            if(packet->stream_index == m_format.audio_index()){
+            }else if(packet->stream_index == m_format.audio_index()){
                 m_queue_audio_packet.enqueue(packet);
+            }else{
+                av_packet_free(&packet);
             }
         } catch (error e) {
             if(e.code == AVERROR_EOF){
@@ -85,11 +86,9 @@ void player::read_packet(runner<player,true>& r){
 
 void player::decode_video_core(AVFrame *frame, AVPacket *packet) {
     int err = avcodec_send_packet(m_format.m_video_codec.p_ctx, packet);
+    av_packet_free(&packet);
     if (err != 0){
-        av_packet_free(&packet);
         throw error(err);
-    }else{
-        av_packet_free(&packet);
     }
     err = avcodec_receive_frame(m_format.m_video_codec.p_ctx, frame);
     if(err != 0){
@@ -99,11 +98,9 @@ void player::decode_video_core(AVFrame *frame, AVPacket *packet) {
 
 void player::decode_audio_core(AVFrame *frame, AVPacket *packet) {
     int err = avcodec_send_packet(m_format.m_audio_codec.p_ctx, packet);
+    av_packet_free(&packet);
     if (err != 0){
-        av_packet_free(&packet);
         throw error(err);
-    }else{
-        av_packet_free(&packet);
     }
     err = avcodec_receive_frame(m_format.m_audio_codec.p_ctx, frame);
     if(err != 0){
@@ -128,6 +125,10 @@ void player::seek_video_run(runner<player,true>& r){
         }
         if(this->seek_current > 0){;
             clear_read_queue();
+            this->current_audio_duration = 0;
+            this->current_audio_timestamp = 0;
+            this->current_video_pts = 0;
+            
             m_format.seek(this->seek_current, this->seek_duration,true);
             
             r.sleep_local(16);
@@ -169,8 +170,7 @@ void player::decode_video(runner<player,true>& r){
             r.sleep_local(1);
             continue;
         }
-        
-        
+
         if(m_state == player_state_seeking) {
             m_state = player_state_paused;
             swap_frame(dframe, frame);
