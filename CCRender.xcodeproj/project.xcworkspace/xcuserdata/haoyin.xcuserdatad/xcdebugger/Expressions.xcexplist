@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ViewController glkView:drawInRect:]:ViewController.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "buffer[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "cc::audio_play::buffer_frame(AVFrame*):cc_render.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "cc::audio_play::render(AVFrame**, unsigned long):cc_render.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "frames[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
