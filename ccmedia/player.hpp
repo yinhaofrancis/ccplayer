@@ -13,7 +13,7 @@
 #include "container.h"
 #include "format.hpp"
 #include "audio.hpp"
-
+#include "type.h"
 
 
 namespace cc {
@@ -56,14 +56,6 @@ public:
     const int MAX_AUDIO_DISPLAY_COUNT = 2;
     
     AVFrame* get_current_frame();
-    
-    enum player_state{
-        player_state_ending,
-        player_state_playing,
-        player_state_paused,
-        player_state_seeking,
-        
-    };
     
     player_state state();
     

@@ -18,9 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     _window = [UIWindow new];
-    UIViewController* c = [tempController new];
-    UINavigationController * a = [[UINavigationController alloc] initWithRootViewController:c];
-    _window.rootViewController = a;
+    _window.rootViewController = [UIStoryboard storyboardWithName:@"main" bundle:nil].instantiateInitialViewController;
     [_window makeKeyAndVisible];
    
     

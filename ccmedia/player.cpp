@@ -40,11 +40,11 @@ player::~player(){
     delete decode_audio_thread;
     
     delete seek_thread;
-    
+    this->m_time_callback = nullptr;
     clear_read_queue();
 }
 void player::read_packet(runner<player,true>& r){
-    
+
     while (!r.is_close()) {
         if(this->is_close){
             r.close();
@@ -74,7 +74,6 @@ void player::read_packet(runner<player,true>& r){
             }
         } catch (error e) {
             if(e.code == AVERROR_EOF){
-                printf("file read eof %s",e.msg.c_str());
                 is_read_end = true;
             }else{
                 printf("error    %s",e.msg.c_str());
@@ -178,6 +177,7 @@ void player::decode_video(runner<player,true>& r){
             swap_frame(dframe, frame);
         }else{
             double delta = video_frame_delay(frame);
+            std::cout << delta << std::endl;
             if(delta > 10 && delta < 1000){
                 r.sleep_millisec(delta);
                 swap_frame(dframe, frame);
@@ -223,7 +223,7 @@ void player::decode_audio(runner<player,true>& r){
         }
         while(m_audio_player.buffer_count() > ceil(MAX_AUDIO_DISPLAY_COUNT * this->m_rate)){
             m_audio_player.dequeue_buffer();
-            r.sleep_millisec(4);
+            r.sleep_millisec(8);
         }
        
         current_audio_timestamp = m_format.audio_timestamp_transform(frame->pts) * 1000;
@@ -233,7 +233,9 @@ void player::decode_audio(runner<player,true>& r){
         auto duration = m_format.audio_timestamp_transform(m_format.audio_duration()) * 1000;
         
         if(state() == player_state_playing){
-            this->m_time_callback(current_audio_timestamp,duration);
+            if(m_time_callback != nullptr){
+                this->m_time_callback(current_audio_timestamp,duration);
+            }
         }
         
         m_audio_player.render(frame);
@@ -241,7 +243,7 @@ void player::decode_audio(runner<player,true>& r){
     }
     av_frame_free(&frame);
 }
-player::player_state player::state(){
+player_state player::state(){
     return m_state;
 }
 void player::rate(double rate){

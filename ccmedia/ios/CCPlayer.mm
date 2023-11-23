@@ -4,39 +4,58 @@
 //
 //  Created by wenyang on 2023/11/20.
 //
+#import <OpenGLES/EAGL.h>
+#include <OpenGLES/ES3/gl.h>
+#include <OpenGLES/ES3/glext.h>
 
-#import "CCRenderUIkit.h"
-//#include "codec.hpp"
-@interface  CCEAGLRender()
-@property(nonatomic,strong) NSThread *thread;
+#include "player.hpp"
+#import "CCPlayer.h"
+#include "video.hpp"
+
+@interface  CCPlayer(){
+    cc::player* player;
+    cc::video_display video;
+}@property(nonatomic,strong) NSThread *thread;
+
 @property(nonatomic,strong) CADisplayLink *link;
+
 @property(nonatomic,strong) NSRunLoop *runloop;
+
 @property(nonatomic,assign) GLuint colorRendrBuffer;
 @property(nonatomic,assign) GLuint depthRendrBuffer;
 @property(nonatomic,assign) GLuint stencilRendrBuffer;
 @property(nonatomic,assign) GLuint frameBuffer;
-@property(nonatomic,  copy) void(^ callback)(void);
+
+@property(nonatomic,readonly)int width;
+
+@property(nonatomic,readonly)int height;
+
 @end
 
-@implementation CCEAGLRender
+@implementation CCPlayer
 
-- (instancetype)initWithTarget:(id)target selector:(SEL)selector{
-    __weak CCEAGLRender* c = self;
-    __weak id wt = target;
-    return [self initWithCallback:^{
-        if(c == nil){
-            return;
-        }
-        [wt performSelector:selector withObject:@(c.frameBuffer)];
-    }];
-}
-
-- (instancetype)initWithCallback:(void(^)(void))callback
-{
+- (instancetype)initWithUrl:(NSURL *)url{
     self = [super init];
     if (self) {
-        self.callback = callback;
-        __weak CCEAGLRender* ws = self;
+        auto a = url.scheme.length > 0 ? url.absoluteString.UTF8String : url.path.UTF8String;
+        try {
+            player = new cc::player(a);
+            player->play();
+        } catch (cc::error) {
+            return nil;
+        }
+        
+        __weak CCPlayer* ws = self;
+        player->time_callback() = [ws](auto current,auto duaration){
+            __strong CCPlayer* sws = ws;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if(sws.observerTime != nil ){
+                    sws.observerTime(duaration == 0 ?  0.0 : current / duaration);
+                }
+            });
+        };
+        
+        
         _context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
         _layer = [[CAEAGLLayer alloc] init];
         _layer.contentsScale = 3;
@@ -57,16 +76,24 @@
             [ws.runloop run];
         }];
         [self.thread start];
+        
+   
+        
     }
     return self;
 }
+
 - (void)dealloc
 {
     glDeleteFramebuffers(1, &_frameBuffer);
     GLuint m [3] = {_colorRendrBuffer,_depthRendrBuffer,_stencilRendrBuffer};
     glDeleteRenderbuffers(3, m);
 }
-
+-(void)draw{
+    video.setScreen(self.width, self.height);
+    auto frame = player->get_current_frame();
+    video.render(frame);
+}
 - (void)drawCall{
     [EAGLContext setCurrentContext:self.context];
     self.context.debugLabel = @"vvvv";
@@ -106,14 +133,15 @@
         // 处理帧缓存不完整的情况
         NSLog(@"%X",status);
     }
-    _callback();
+    [self draw];
     [self.context presentRenderbuffer:GL_RENDERBUFFER];
 }
 - (void)stop{
+    delete player;
     [self.link removeFromRunLoop:self.runloop forMode:NSDefaultRunLoopMode];
     [self.link invalidate];
     self.link = nil;
-    _callback = nil;
+    self.observerTime = nil;
     CFRunLoopStop([_runloop getCFRunLoop]);
     [_thread cancel];
 }
@@ -129,6 +157,22 @@
     glBindFramebuffer(GLenum(GL_FRAMEBUFFER), _frameBuffer);
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &size);
     return size;
+}
+
+- (void)seek:(double)percent{
+    self->player->seek_to(percent);
+}
+- (void)play{
+    self->player->play();
+}
+- (void)pause{
+    self->player->pause();
+}
+- (player_state)state{
+    return self->player->state();
+}
+- (void)rate:(double)rate {
+    self->player->rate(rate);
 }
 
 @end

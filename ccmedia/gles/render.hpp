@@ -417,7 +417,5 @@ public:
 };
 
 
-#define shader_code(code) #code
-
 
 #endif /* Render_hpp */

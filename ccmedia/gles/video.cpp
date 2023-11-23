@@ -6,59 +6,17 @@
 //
 
 #include "video.hpp"
-
+#include "shader_import.h"
 using namespace cc;
 
 void video_display::load_program() {
     if(m_program_obj == nullptr){
-        const char * vshader = shader_code(#version 300 es
-                                           
-                                           layout(location = 0) in vec4 vPosition;
-                                           layout(location = 1) in vec2 vUV;
-                                           
-                                           uniform mat4 projection_matrix;
-                                           uniform mat4 matrix;
-                                           
-                                           
-                                           
-                                           out vec2 s_uv;
-                                           
-                                           void main(){
-            gl_Position = projection_matrix * matrix  * vPosition;
-            s_uv = vUV;
-        }
-                                           );
-        
-        const char * fshader = shader_code(#version 300 es
-                                           precision highp float;
-                                           
-                                           
-                                           uniform sampler2D s_Y;
-                                           uniform sampler2D s_U;
-                                           uniform sampler2D s_V;
-                                           
-                                           in vec2 s_uv;
-                                           
-                                           layout (location = 0) out vec4 fragColor;
-                                           
-                                           void main(){
-            float y =   texture(s_Y,s_uv).x;
-            float u =   texture(s_U,s_uv).x - 0.5;
-            float v =   texture(s_V,s_uv).x - 0.5;
-            float r =   y + 1.403 * v;
-            float g =   y - 0.344 * u - 0.714 * v;
-            float b =   y + 1.770 * u;
-            fragColor = vec4(r,g,b,1);
-        }
-                                           
-                                           );
-        
-        m_program_obj = new program(vshader, fshader);
+        m_program_obj = new program(video_vertex_shader, video_fragment_shader);
     }
 }
 
 void video_display::load_vertex() {
-    if(m_program_obj == nullptr){
+    if(m_vertex_obj == nullptr){
         float v[8 * 6] = {
             -1,  1,  -2, 1    ,0,0,
             -1, -1,  -2, 1    ,0,1,
@@ -79,15 +37,17 @@ void video_display::load_vertex() {
 }
 
 video_display::video_display(){
-    m_program_obj = nullptr;
     m_vertex_obj = nullptr;
-    
+}
+float& video_display::gamma(){
+    return m_gamma;
 }
 video_display::~video_display(){
     if(m_program_obj != nullptr){
         m_program_obj->close();
         delete m_program_obj;
     }
+    
     if(m_vertex_obj != nullptr){
         m_vertex_obj->close();
         delete m_vertex_obj;
@@ -135,9 +95,8 @@ void video_display::render(AVFrame* frame){
     if(frame_w == 0 || frame_h == 0 || m_screen_w == 0 || m_screen_h == 0){
         return;
     }
-    
-    load_vertex();
     load_program();
+    load_vertex();
     
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glClearColor(0,0,0,0);
@@ -149,12 +108,14 @@ void video_display::render(AVFrame* frame){
 
     auto pro_mat = glm::ortho(-m_screen_w / 1.0f, m_screen_w / 1.0f, -m_screen_h / 1.0f, m_screen_h / 1.0f, 1.f, 100.f);
     auto mat1 = glm::scale(glm::mat4(1.0f), glm::vec3(frame_w,frame_h,1));
-    this->m_program_obj->bind();
-    this->m_program_obj->bindMatrix<4>(glm::value_ptr(mat1), "matrix");
-    this->m_program_obj->bindMatrix<4>(glm::value_ptr(pro_mat), "projection_matrix");
+    this-> m_program_obj->bind();
+    this-> m_program_obj->bindMatrix<4>(glm::value_ptr(mat1), "matrix");
+    this-> m_program_obj->bindMatrix<4>(glm::value_ptr(pro_mat), "projection_matrix");
    
-    this->m_program_obj->bindTexture2D<0>(tex.texture_value(), "s_Y");
-    this->m_program_obj->bindTexture2D<1>(tex2.texture_value(), "s_U");
-    this->m_program_obj->bindTexture2D<2>(tex3.texture_value(), "s_V");
+    this-> m_program_obj->bindTexture2D<0>(tex.texture_value(), "s_Y");
+    this-> m_program_obj->bindTexture2D<1>(tex2.texture_value(), "s_U");
+    this-> m_program_obj->bindTexture2D<2>(tex3.texture_value(), "s_V");
+    this-> m_program_obj->bindValue(m_gamma, "v_gamma");
+    
     this->m_vertex_obj->draw(GL_TRIANGLES);
 }

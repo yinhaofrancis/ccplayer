@@ -15,9 +15,9 @@ namespace cc {
 
 class video_display{
     
-    vertex * m_vertex_obj;
+    vertex *m_vertex_obj;
     
-    program* m_program_obj;
+    program *m_program_obj;
     
     frame_buffer* buffer;
     
@@ -28,6 +28,8 @@ class video_display{
     float frame_w;
     
     float frame_h;
+    
+    float m_gamma = 0.75;
     
     texture tex;
     
@@ -53,8 +55,9 @@ public:
     video_display();
     
     ~video_display();
+    
+    float& gamma();
 };
-
 
 };
 

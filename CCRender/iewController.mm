@@ -7,16 +7,18 @@
 
 #import "iewController.h"
 #include "player.hpp"
-#include "video.hpp"
-#import "CCRenderUIkit.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-@interface iewController (){
+@interface iewController ()
+@property (weak, nonatomic) IBOutlet UISlider *sliderview;
+@property (weak, nonatomic) IBOutlet UIButton *olayButton;
 
-    cc::player* player;
-    cc::video_display video;
-}
+@property (weak, nonatomic) IBOutlet UIView *widgetview;
+
+
+
+@property (weak,nonatomic) NSTimer * timer;
 
 @end
 
@@ -26,149 +28,117 @@
     [super viewDidLoad];
     id  sharedObject = [objc_lookUpClass("AVAudioSession") performSelector:sel_getUid("sharedInstance")];
         [sharedObject performSelector:sel_getUid("setActive:error:") withObject:@true withObject:nil];
-    auto a = _u.path.UTF8String;
+
+
 //    auto a = "/Users/haoyin/Desktop/gamesci_2022PV03.mp4";
-    player = new cc::player(a);
-    player->play();
+    
     
 //    _player->play();
-    self.render = [[CCEAGLRender alloc] initWithTarget:self selector:@selector(call:)];
+    __weak iewController *ws = self;
+    self.render = [[CCPlayer alloc] initWithUrl:_u];
     [self.view.layer addSublayer:self.render.layer];
-    self.render.layer.frame = CGRectMake(0, 0, 414, 414.0 * 16 / 9);
-    
-
-    UIButton* b = [UIButton buttonWithType:UIButtonTypeSystem];
-    b.frame = CGRectMake(0, 88, 88, 88);
-    [b addTarget:self action:@selector(pause) forControlEvents:UIControlEventTouchUpInside];
-    [b setTitle:@"暂停" forState:UIControlStateNormal];
-    b.tintColor = UIColor.cyanColor;
-    [self.view addSubview:b];
-    
-    
-    UIButton* c = [UIButton buttonWithType:UIButtonTypeSystem];
-    c.frame = CGRectMake(88, 88, 88, 88);
-    [c addTarget:self action:@selector(play) forControlEvents:UIControlEventTouchUpInside];
-    [c setTitle:@"播放" forState:UIControlStateNormal];
-    c.tintColor = UIColor.cyanColor;
-    [self.view addSubview:c];
-    
-    UISlider *d = [[UISlider alloc] init];
-    [self.view addSubview:d];
-    d.maximumValue = 1;
-    d.minimumValue = 0;
-    d.frame = CGRectMake(88, 88 + 88, 300,44);
-    [d addTarget:self action:@selector(slider:) forControlEvents:UIControlEventValueChanged];
-    
-    [d addTarget:self action:@selector(sliderEnd:) forControlEvents:UIControlEventTouchUpInside];
-//    d.continuous = false;
-    {
-        UIButton* c = [UIButton buttonWithType:UIButtonTypeSystem];
-        c.frame = CGRectMake(88 + 88, 88, 88, 88);
-        [c addTarget:self action:@selector(playp5) forControlEvents:UIControlEventTouchUpInside];
-        [c setTitle:@"0.75x" forState:UIControlStateNormal];
-        c.tintColor = UIColor.cyanColor;
-        [self.view addSubview:c];
-    }
-    
-    {
-        UIButton* c = [UIButton buttonWithType:UIButtonTypeSystem];
-        c.frame = CGRectMake(88 + 88 + 88, 88, 88, 88);
-        [c addTarget:self action:@selector(play1x) forControlEvents:UIControlEventTouchUpInside];
-        [c setTitle:@"1x" forState:UIControlStateNormal];
-        c.tintColor = UIColor.cyanColor;
-        [self.view addSubview:c];
-    }
-    
-    {
-        UIButton* c = [UIButton buttonWithType:UIButtonTypeSystem];
-        c.frame = CGRectMake(88 + 88 + 88 + 88, 88, 88, 88);
-        [c addTarget:self action:@selector(play2x) forControlEvents:UIControlEventTouchUpInside];
-        [c setTitle:@"1.75x" forState:UIControlStateNormal];
-        c.tintColor = UIColor.cyanColor;
-        [self.view addSubview:c];
-    }
-    
-    
-    
-    player->time_callback() = [d](auto current,auto duration){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            d.value = current / duration;
-        });
+//    self.render.layer.backgroundColor = UIColor.redColor;
+    self.render.observerTime = ^(double f) {
+        ws.sliderview.value = f;
+        ws.olayButton.selected = ws.render.state == player_state_playing;
+        if(!CGRectEqualToRect(ws.render.layer.frame, ws.view.bounds)){
+            ws.render.layer.frame = ws.view.bounds;
+        }
     };
-}
-- (void)pause{
-    player->pause();
+    self.render.layer.zPosition = -1;
+    
+    [self showWidget];
 }
 
-- (void)play{
-    player->play();
+- (IBAction)play:(UIButton *)b{
+    if(b.selected){
+        [self.render pause];
+    }else{
+        [self.render play];
+    }
+    b.selected = !b.selected;
+    [self showWidget];
 }
-- (void)playp5{
-    player->rate(0.75);
+- (IBAction)playp5{
+    [self.render rate:0.5];
 }
-- (void)play1x{
-    player->rate(1);
+- (IBAction)play1x{
+    [self.render rate:1];
 }
-- (void)play2x{
-    player->rate(1.75);
+- (IBAction)play2x{
+    [self.render rate:2.0];
+//    player->rate(2.0);
 }
-- (void)slider:(UISlider *)slider{
-    player->seek_to(slider.value);
+- (IBAction)slider:(UISlider *)slider{
+    [self.render seek:slider.value];
 }
-- (void)sliderEnd:(UISlider *)slider{
-    player->play();
+- (IBAction)sliderEnd:(UISlider *)slider{
+    [self.render play];
 }
-- (void)call:(NSNumber *)n{
-    video.setScreen(self.render.width, self.render.height);
-    auto frame = player->get_current_frame();
-    video.render(frame);
-}
+
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillDisappear:animated];
     self.render.layer.frame = self.view.bounds;
-    [super viewWillAppear:animated];
 }
-- (void)dealloc
-{
-    delete player;
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesEnded:touches withEvent:event];
+    [self showWidget];
+}
+-(void)showWidget{
+    if(self.timer != nil){
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 repeats:false block:^(NSTimer * _Nonnull timer) {
+        [UIView animateWithDuration:0.24 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{
+            self.widgetview.alpha = 0;
+        } completion:^(BOOL finished) {
+            
+        }];
+        [timer invalidate];
+    }];
+    [UIView animateWithDuration:0.24 delay:0 options:UIViewAnimationCurveEaseInOut animations:^{
+        self.widgetview.alpha = 1;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+- (void)dealloc{
     [self.render stop];
 }
+
 @end
 
 
+@interface tempController ()<UITextFieldDelegate>
+
+@end
 
 @implementation tempController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    {
-        UIButton * b = [UIButton buttonWithType:UIButtonTypeSystem];
-        [b setTitle:@"相册" forState:UIControlStateNormal];
-        b.backgroundColor = UIColor.blueColor;
-        [self.view addSubview:b];
-        b.frame = CGRectMake(0, 0, 200, 200);
-        [b addTarget:self action:@selector(goGallery) forControlEvents:UIControlEventTouchUpInside];
-    }
     
-    {
-        UIButton * b = [UIButton buttonWithType:UIButtonTypeSystem];
-        [b setTitle:@"文件" forState:UIControlStateNormal];
-        b.backgroundColor = UIColor.blueColor;
-        [self.view addSubview:b];
-        b.frame = CGRectMake(200, 0, 200, 200);
-        [b addTarget:self action:@selector(goExploer) forControlEvents:UIControlEventTouchUpInside];
-      
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    NSURL * url = [[NSURL alloc] initWithString:self.pathView.text];
+    if(url != nil){
+        [self performSegueWithIdentifier:@"play" sender:url];
+        return true;
     }
+    return false;
 }
-
 - (void)goGallery{
-    UIImagePickerController* pick = [[UIImagePickerController alloc] init];
-    pick.delegate = self;
-    pick.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    pick.mediaTypes = @[(id)kUTTypeMovie];
-    pick.allowsEditing = false;
-    [self showViewController:pick sender:nil];
+//    UIImagePickerController* pick = [[UIImagePickerController alloc] init];
+//    pick.delegate = self;
+//    pick.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//    pick.mediaTypes = @[(id)kUTTypeMovie];
+//    pick.allowsEditing = false;
+//    [self showViewController:pick sender:nil];
+    
+    
 }
-- (void)goExploer{
+- (IBAction)goExploer{
     UIDocumentPickerViewController* pick = [[UIDocumentPickerViewController alloc]
                                             initWithDocumentTypes:@[@"public.movie"] inMode:UIDocumentPickerModeImport];
     
@@ -178,22 +148,22 @@
     [self presentViewController:pick animated:true completion:nil];
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
-    iewController * vc = [[iewController alloc] init];
-    vc.u = info[UIImagePickerControllerMediaURL];
+
     [picker dismissViewControllerAnimated:true completion:^{
-        [self showViewController:vc sender:nil];
+        [self performSegueWithIdentifier:@"play" sender:info[UIImagePickerControllerMediaURL]];
     }];
 //    NSURL
 }
 - (void)documentPicker:(UIDocumentPickerViewController *)controller didPickDocumentsAtURLs:(NSArray<NSURL *> *)urls{
-    iewController * vc = [[iewController alloc] init];
-    vc.u = urls.firstObject;
     [controller dismissViewControllerAnimated:true completion:^{
-        [self showViewController:vc sender:nil];
+        [self performSegueWithIdentifier:@"play" sender:urls.firstObject];
     }];
 }
-- (void)documentPickerWasCancelled:(UIDocumentPickerViewController *)controller{
-    NSLog(@"dasdasd");
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    iewController* dest = segue.destinationViewController;
+    dest.u = sender;
 }
 
 @end

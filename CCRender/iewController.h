@@ -6,17 +6,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CCRenderUIkit.h"
+#import "CCPlayer.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
 
 @interface iewController : UIViewController
-@property(nonatomic,strong) CCEAGLRender* render;
+@property(nonatomic,strong) CCPlayer* render;
+
 @property(nonatomic,strong) NSURL * u;
 @end
 
 @interface tempController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIDocumentPickerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *pathView;
 
 @end
 

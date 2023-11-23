@@ -39,6 +39,15 @@ public:
         m_lock.unlock();
         return t;
     }
+    T pop(){
+        
+        m_lock.lock();
+        auto t = this->back();
+        this->pop_back();
+        m_lock.unlock();
+        return t;
+    }
+    
     size_t size(){
         m_lock.lock();
         auto e = std::list<T>::size();
@@ -90,7 +99,7 @@ public:
         
         return close;
     }
-    inline void sleep_millsseconds(int ms){
+    inline void next_loop_sleep_millsseconds(int ms){
         m_millseconds = ms;
     }
     void run(){

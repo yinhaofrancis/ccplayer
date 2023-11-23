@@ -90,7 +90,9 @@ program::program(shader&& vertex,shader&& fragment){
 program::program(std::string& vertex,std::string& fragment):program(shader(vertex, GL_VERTEX_SHADER),shader(fragment, GL_FRAGMENT_SHADER)){}
 program::program(const char * vertex,const char * fragment):program(shader(vertex, GL_VERTEX_SHADER),shader(fragment, GL_FRAGMENT_SHADER)){}
 void program::close(){
-    glDeleteProgram(_handle);
+    if(_handle != 0){
+        glDeleteProgram(_handle);
+    }
 }
 program::program(const program& p){
     _handle = p._handle;
