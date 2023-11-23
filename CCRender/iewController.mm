@@ -65,7 +65,7 @@
         UIButton* c = [UIButton buttonWithType:UIButtonTypeSystem];
         c.frame = CGRectMake(88 + 88, 88, 88, 88);
         [c addTarget:self action:@selector(playp5) forControlEvents:UIControlEventTouchUpInside];
-        [c setTitle:@"0,5x" forState:UIControlStateNormal];
+        [c setTitle:@"0.75x" forState:UIControlStateNormal];
         c.tintColor = UIColor.cyanColor;
         [self.view addSubview:c];
     }
@@ -83,7 +83,7 @@
         UIButton* c = [UIButton buttonWithType:UIButtonTypeSystem];
         c.frame = CGRectMake(88 + 88 + 88 + 88, 88, 88, 88);
         [c addTarget:self action:@selector(play2x) forControlEvents:UIControlEventTouchUpInside];
-        [c setTitle:@"2x" forState:UIControlStateNormal];
+        [c setTitle:@"1.75x" forState:UIControlStateNormal];
         c.tintColor = UIColor.cyanColor;
         [self.view addSubview:c];
     }
@@ -104,13 +104,13 @@
     player->play();
 }
 - (void)playp5{
-    player->rate(0.5);
+    player->rate(0.75);
 }
 - (void)play1x{
     player->rate(1);
 }
 - (void)play2x{
-    player->rate(2);
+    player->rate(1.75);
 }
 - (void)slider:(UISlider *)slider{
     player->seek_to(slider.value);

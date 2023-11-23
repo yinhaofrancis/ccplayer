@@ -78,8 +78,11 @@ class runner{
 public:
 
 
-    inline void sleep_local(int millseconds){
+    inline void sleep_millisec(int millseconds){
         std::this_thread::sleep_for(std::chrono::milliseconds(millseconds));
+    }
+    inline void sleep_nanosec(int nanoseconds){
+        std::this_thread::sleep_for(std::chrono::nanoseconds(nanoseconds));
     }
     
     inline bool is_close(){

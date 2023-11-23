@@ -44,7 +44,7 @@ AudioBuffer audio_player::create_audio_buffer(AVFrame *frame) {
         alSourcef(m_source, AL_CHANNELS, 2);
         
     }
-    auto out_buffer_size = av_samples_get_buffer_size(NULL, frame->channels, frame->nb_samples, AV_SAMPLE_FMT_S16, 0);
+    auto out_buffer_size = av_samples_get_buffer_size(NULL, this->m_channels, frame->nb_samples, AV_SAMPLE_FMT_S16, 0);
     uint8_t* out[] = {(uint8_t*)malloc(out_buffer_size),0};
     swr_convert(this->m_audio_swr_context, out, frame->nb_samples, (const uint8_t **)frame->data, frame->nb_samples);
     AudioBuffer buffer;
@@ -118,7 +118,7 @@ void audio_player::dequeue_buffer() {
     
 
     while (buffersProcessed > 0) {
-        ALuint buffer;
+        ALuint buffer = 0;
         alSourceUnqueueBuffers(this->m_source, 1, &buffer);
         alDeleteBuffers(1, &buffer);
         buffersProcessed --;
@@ -127,7 +127,7 @@ void audio_player::dequeue_buffer() {
 }
 
 int audio_player::buffer_count(){
-    ALint queuedBuffers;
+    ALint queuedBuffers = 0;
     alGetSourcei(m_source, AL_BUFFERS_QUEUED, &queuedBuffers);
     return queuedBuffers;
 }
@@ -152,7 +152,7 @@ void audio_player::config(AVCodecContext &ctx){
     if(this->m_audio_swr_context == nullptr){
         this->m_audio_swr_context = swr_alloc();
         swr_alloc_set_opts(this->m_audio_swr_context,
-                           av_get_default_channel_layout(this->channels),
+                           av_get_default_channel_layout(this->m_channels),
                            AV_SAMPLE_FMT_S16,
                            ctx.sample_rate,
                            av_get_default_channel_layout(ctx.channels),

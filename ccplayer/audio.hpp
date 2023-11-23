@@ -45,9 +45,9 @@ class audio_player{
     
     SwrContext* m_audio_swr_context;
     
-    const int channels = 2;
+    const int m_channels = 2;
     
-    const ALenum format = AL_FORMAT_STEREO16;
+    const ALenum m_format = AL_FORMAT_STEREO16;
     
     AudioBuffer create_audio_buffer(AVFrame *frame);
     

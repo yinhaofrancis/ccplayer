@@ -128,6 +128,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A914336C2B0F18F9004A0589 /* gles */ = {
+			isa = PBXGroup;
+			children = (
+				A9FD27152B0E4B6B00222E33 /* render.cpp */,
+				A9FD270B2B0E4B6A00222E33 /* render.hpp */,
+				A9FD270F2B0E4B6B00222E33 /* video.cpp */,
+				A9FD270D2B0E4B6A00222E33 /* video.hpp */,
+			);
+			path = gles;
+			sourceTree = "<group>";
+		};
 		A994E3212B03525D003B0CA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +200,7 @@
 		A9FD26FE2B0E4B0700222E33 /* ccplayer */ = {
 			isa = PBXGroup;
 			children = (
+				A914336C2B0F18F9004A0589 /* gles */,
 				A9FD27322B0E4CEA00222E33 /* ios */,
 				A9FD27112B0E4B6B00222E33 /* audio.cpp */,
 				A9FD270A2B0E4B6A00222E33 /* audio.hpp */,
@@ -198,10 +210,6 @@
 				A9FD27162B0E4B6B00222E33 /* format.hpp */,
 				A9FD270C2B0E4B6A00222E33 /* player.cpp */,
 				A9FD270E2B0E4B6A00222E33 /* player.hpp */,
-				A9FD27152B0E4B6B00222E33 /* render.cpp */,
-				A9FD270B2B0E4B6A00222E33 /* render.hpp */,
-				A9FD270F2B0E4B6B00222E33 /* video.cpp */,
-				A9FD270D2B0E4B6A00222E33 /* video.hpp */,
 			);
 			path = ccplayer;
 			sourceTree = "<group>";

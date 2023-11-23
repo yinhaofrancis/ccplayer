@@ -11,7 +11,9 @@ using namespace cc;
 
 
 player::player(const char * localpath):m_format(localpath){
-    m_audio_player.config(*m_format.m_audio_codec.p_ctx);
+    if(m_format.m_audio_codec.p_ctx != nullptr){
+        m_audio_player.config(*m_format.m_audio_codec.p_ctx);
+    }
 }
 
 void player::clear_read_queue() {
@@ -48,16 +50,16 @@ void player::read_packet(runner<player,true>& r){
             r.close();
         }
         if(this->state() == player_state_paused){
-            r.sleep_local(50);
+            r.sleep_millisec(50);
             continue;
         }
         if(this->is_read_end){
-            r.sleep_local(250);
+            r.sleep_millisec(250);
             is_read_end = false;
             continue;
         }
         if(m_queue_audio_packet.size() > MAX_AUDIO_COUNT && m_queue_video_packet.size() > MAX_VIDEO_COUNT){
-            r.sleep_local(1);
+            r.sleep_millisec(1);
             continue;
         }
         try {
@@ -77,7 +79,7 @@ void player::read_packet(runner<player,true>& r){
             }else{
                 printf("error    %s",e.msg.c_str());
             }
-            r.sleep_local(200);
+            r.sleep_millisec(200);
             
         }
         
@@ -120,7 +122,7 @@ void player::seek_video_run(runner<player,true>& r){
  
     while (!r.is_close()){
         if(this->m_state != player_state_seeking){
-            r.sleep_local(300);
+            r.sleep_millisec(300);
             continue;
         }
         if(this->seek_current > 0){;
@@ -131,9 +133,9 @@ void player::seek_video_run(runner<player,true>& r){
             
             m_format.seek(this->seek_current, this->seek_duration,true);
             
-            r.sleep_local(16);
+            r.sleep_millisec(16);
         }
-        r.sleep_local(16);
+        r.sleep_millisec(16);
     }
 }
 
@@ -156,18 +158,18 @@ void player::decode_video(runner<player,true>& r){
             r.close();
         }
         if(m_state == player_state_paused){
-            r.sleep_local(50);
+            r.sleep_millisec(50);
             continue;
         }
         if(m_queue_video_packet.size() == 0){
-            r.sleep_local(12);
+            r.sleep_millisec(12);
             continue;
         }
         auto packet = m_queue_video_packet.dequeue();
         try {
             decode_video_core(frame, packet);
         } catch (error e) {
-            r.sleep_local(1);
+            r.sleep_millisec(1);
             continue;
         }
 
@@ -177,7 +179,7 @@ void player::decode_video(runner<player,true>& r){
         }else{
             double delta = video_frame_delay(frame);
             if(delta > 10 && delta < 1000){
-                r.sleep_local(delta);
+                r.sleep_millisec(delta);
                 swap_frame(dframe, frame);
             }else {
                 swap_frame(dframe, frame);
@@ -200,15 +202,15 @@ void player::decode_audio(runner<player,true>& r){
             continue;
         }
         if(this->m_state == player_state_seeking){
-            r.sleep_local(50);
+            r.sleep_millisec(50);
             continue;;
         }
         if(this->m_state == player_state_paused){
-            r.sleep_local(50);
+            r.sleep_millisec(50);
             continue;;
         }
         if(m_queue_audio_packet.size() == 0){
-            r.sleep_local(12);
+            r.sleep_millisec(12);
             continue;;
         }
         auto packet = m_queue_audio_packet.dequeue();
@@ -216,12 +218,12 @@ void player::decode_audio(runner<player,true>& r){
         try {
             decode_audio_core(frame, packet);
         } catch (error e) {
-            r.sleep_local(1);
+            r.sleep_millisec(1);
             continue;
         }
-        while(m_audio_player.buffer_count() > MAX_AUDIO_DISPLAY_COUNT * this->m_rate){
+        while(m_audio_player.buffer_count() > ceil(MAX_AUDIO_DISPLAY_COUNT * this->m_rate)){
             m_audio_player.dequeue_buffer();
-            r.sleep_local(4);
+            r.sleep_millisec(4);
         }
        
         current_audio_timestamp = m_format.audio_timestamp_transform(frame->pts) * 1000;
