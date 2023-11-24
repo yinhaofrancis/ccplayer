@@ -6,7 +6,6 @@
 //
 
 #import "iewController.h"
-#include "player.hpp"
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <MobileCoreServices/MobileCoreServices.h>

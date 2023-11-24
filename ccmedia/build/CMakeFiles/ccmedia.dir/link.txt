@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libccmedia.a CMakeFiles/ccmedia.dir/player/player.cpp.o CMakeFiles/ccmedia.dir/player/format.cpp.o CMakeFiles/ccmedia.dir/shader/shader_import.c.o CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o CMakeFiles/ccmedia.dir/gles/render.cpp.o CMakeFiles/ccmedia.dir/gles/video.cpp.o CMakeFiles/ccmedia.dir/al/audio.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libccmedia.a
