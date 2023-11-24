@@ -1,0 +1,391 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "libccmedia.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"install",
+			"add_compile_definitions",
+			"include_directories",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 61,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 94,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 88,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-target arm64-apple-ios12.0 -g -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "AL_SILENCE_DEPRECATION"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "GLES_SILENCE_DEPRECATION"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../third_party/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type.h"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/CCPlayer.h"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				6,
+				8,
+				10,
+				12,
+				16
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-target arm64-apple-ios12.0 -fobjc-arc -fobjc-weak -g -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "AL_SILENCE_DEPRECATION"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "GLES_SILENCE_DEPRECATION"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../third_party/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type.h"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/CCPlayer.h"
+				}
+			],
+			"language" : "OBJCXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				5
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-target arm64-apple-ios12.0 -g -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "AL_SILENCE_DEPRECATION"
+				},
+				{
+					"backtrace" : 4,
+					"define" : "GLES_SILENCE_DEPRECATION"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../third_party/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type.h"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/CCPlayer.h"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				14
+			]
+		}
+	],
+	"id" : "ccmedia::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../export/lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../export"
+		}
+	},
+	"name" : "ccmedia",
+	"nameOnDisk" : "libccmedia.a",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				2,
+				5,
+				6,
+				8,
+				10,
+				12,
+				14,
+				16
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1,
+				3,
+				4,
+				7,
+				9,
+				11,
+				13,
+				15,
+				17,
+				18,
+				19,
+				20
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ccmedia/encoder/encoder.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/encoder/encoder.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ccmedia/encoder/writer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/encoder/writer.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/ios/CCPlayer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "ccmedia/ios/CCPlayer.mm",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ccmedia/player/format.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/player/format.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ccmedia/player/player.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/player/player.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ccmedia/render/audio.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/render/audio.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ccmedia/render/render.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/render/render.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 2,
+			"path" : "ccmedia/render/shader_import.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/render/shader_import.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ccmedia/render/video.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/render/video.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/util/cc_util.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/util/container.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ccmedia/util/type.h",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

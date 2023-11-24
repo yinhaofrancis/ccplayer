@@ -174,157 +174,205 @@ ccmedia/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/build
 .PHONY : ccmedia/fast
 
-al/audio.o: al/audio.cpp.o
-.PHONY : al/audio.o
+ccmedia/encoder/encoder.o: ccmedia/encoder/encoder.cpp.o
+.PHONY : ccmedia/encoder/encoder.o
 
 # target to build an object file
-al/audio.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/al/audio.cpp.o
-.PHONY : al/audio.cpp.o
+ccmedia/encoder/encoder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o
+.PHONY : ccmedia/encoder/encoder.cpp.o
 
-al/audio.i: al/audio.cpp.i
-.PHONY : al/audio.i
+ccmedia/encoder/encoder.i: ccmedia/encoder/encoder.cpp.i
+.PHONY : ccmedia/encoder/encoder.i
 
 # target to preprocess a source file
-al/audio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/al/audio.cpp.i
-.PHONY : al/audio.cpp.i
+ccmedia/encoder/encoder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.i
+.PHONY : ccmedia/encoder/encoder.cpp.i
 
-al/audio.s: al/audio.cpp.s
-.PHONY : al/audio.s
+ccmedia/encoder/encoder.s: ccmedia/encoder/encoder.cpp.s
+.PHONY : ccmedia/encoder/encoder.s
 
 # target to generate assembly for a file
-al/audio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/al/audio.cpp.s
-.PHONY : al/audio.cpp.s
+ccmedia/encoder/encoder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.s
+.PHONY : ccmedia/encoder/encoder.cpp.s
 
-gles/render.o: gles/render.cpp.o
-.PHONY : gles/render.o
+ccmedia/encoder/writer.o: ccmedia/encoder/writer.cpp.o
+.PHONY : ccmedia/encoder/writer.o
 
 # target to build an object file
-gles/render.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/gles/render.cpp.o
-.PHONY : gles/render.cpp.o
+ccmedia/encoder/writer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o
+.PHONY : ccmedia/encoder/writer.cpp.o
 
-gles/render.i: gles/render.cpp.i
-.PHONY : gles/render.i
+ccmedia/encoder/writer.i: ccmedia/encoder/writer.cpp.i
+.PHONY : ccmedia/encoder/writer.i
 
 # target to preprocess a source file
-gles/render.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/gles/render.cpp.i
-.PHONY : gles/render.cpp.i
+ccmedia/encoder/writer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.i
+.PHONY : ccmedia/encoder/writer.cpp.i
 
-gles/render.s: gles/render.cpp.s
-.PHONY : gles/render.s
+ccmedia/encoder/writer.s: ccmedia/encoder/writer.cpp.s
+.PHONY : ccmedia/encoder/writer.s
 
 # target to generate assembly for a file
-gles/render.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/gles/render.cpp.s
-.PHONY : gles/render.cpp.s
+ccmedia/encoder/writer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.s
+.PHONY : ccmedia/encoder/writer.cpp.s
 
-gles/video.o: gles/video.cpp.o
-.PHONY : gles/video.o
+ccmedia/ios/CCPlayer.o: ccmedia/ios/CCPlayer.mm.o
+.PHONY : ccmedia/ios/CCPlayer.o
 
 # target to build an object file
-gles/video.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/gles/video.cpp.o
-.PHONY : gles/video.cpp.o
+ccmedia/ios/CCPlayer.mm.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o
+.PHONY : ccmedia/ios/CCPlayer.mm.o
 
-gles/video.i: gles/video.cpp.i
-.PHONY : gles/video.i
+ccmedia/player/format.o: ccmedia/player/format.cpp.o
+.PHONY : ccmedia/player/format.o
+
+# target to build an object file
+ccmedia/player/format.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o
+.PHONY : ccmedia/player/format.cpp.o
+
+ccmedia/player/format.i: ccmedia/player/format.cpp.i
+.PHONY : ccmedia/player/format.i
 
 # target to preprocess a source file
-gles/video.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/gles/video.cpp.i
-.PHONY : gles/video.cpp.i
+ccmedia/player/format.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.i
+.PHONY : ccmedia/player/format.cpp.i
 
-gles/video.s: gles/video.cpp.s
-.PHONY : gles/video.s
+ccmedia/player/format.s: ccmedia/player/format.cpp.s
+.PHONY : ccmedia/player/format.s
 
 # target to generate assembly for a file
-gles/video.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/gles/video.cpp.s
-.PHONY : gles/video.cpp.s
+ccmedia/player/format.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.s
+.PHONY : ccmedia/player/format.cpp.s
 
-ios/CCPlayer.o: ios/CCPlayer.mm.o
-.PHONY : ios/CCPlayer.o
-
-# target to build an object file
-ios/CCPlayer.mm.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o
-.PHONY : ios/CCPlayer.mm.o
-
-player/format.o: player/format.cpp.o
-.PHONY : player/format.o
+ccmedia/player/player.o: ccmedia/player/player.cpp.o
+.PHONY : ccmedia/player/player.o
 
 # target to build an object file
-player/format.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/player/format.cpp.o
-.PHONY : player/format.cpp.o
+ccmedia/player/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o
+.PHONY : ccmedia/player/player.cpp.o
 
-player/format.i: player/format.cpp.i
-.PHONY : player/format.i
+ccmedia/player/player.i: ccmedia/player/player.cpp.i
+.PHONY : ccmedia/player/player.i
 
 # target to preprocess a source file
-player/format.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/player/format.cpp.i
-.PHONY : player/format.cpp.i
+ccmedia/player/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.i
+.PHONY : ccmedia/player/player.cpp.i
 
-player/format.s: player/format.cpp.s
-.PHONY : player/format.s
+ccmedia/player/player.s: ccmedia/player/player.cpp.s
+.PHONY : ccmedia/player/player.s
 
 # target to generate assembly for a file
-player/format.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/player/format.cpp.s
-.PHONY : player/format.cpp.s
+ccmedia/player/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.s
+.PHONY : ccmedia/player/player.cpp.s
 
-player/player.o: player/player.cpp.o
-.PHONY : player/player.o
+ccmedia/render/audio.o: ccmedia/render/audio.cpp.o
+.PHONY : ccmedia/render/audio.o
 
 # target to build an object file
-player/player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/player/player.cpp.o
-.PHONY : player/player.cpp.o
+ccmedia/render/audio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o
+.PHONY : ccmedia/render/audio.cpp.o
 
-player/player.i: player/player.cpp.i
-.PHONY : player/player.i
+ccmedia/render/audio.i: ccmedia/render/audio.cpp.i
+.PHONY : ccmedia/render/audio.i
 
 # target to preprocess a source file
-player/player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/player/player.cpp.i
-.PHONY : player/player.cpp.i
+ccmedia/render/audio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.i
+.PHONY : ccmedia/render/audio.cpp.i
 
-player/player.s: player/player.cpp.s
-.PHONY : player/player.s
+ccmedia/render/audio.s: ccmedia/render/audio.cpp.s
+.PHONY : ccmedia/render/audio.s
 
 # target to generate assembly for a file
-player/player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/player/player.cpp.s
-.PHONY : player/player.cpp.s
+ccmedia/render/audio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.s
+.PHONY : ccmedia/render/audio.cpp.s
 
-shader/shader_import.o: shader/shader_import.c.o
-.PHONY : shader/shader_import.o
+ccmedia/render/render.o: ccmedia/render/render.cpp.o
+.PHONY : ccmedia/render/render.o
 
 # target to build an object file
-shader/shader_import.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/shader/shader_import.c.o
-.PHONY : shader/shader_import.c.o
+ccmedia/render/render.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o
+.PHONY : ccmedia/render/render.cpp.o
 
-shader/shader_import.i: shader/shader_import.c.i
-.PHONY : shader/shader_import.i
+ccmedia/render/render.i: ccmedia/render/render.cpp.i
+.PHONY : ccmedia/render/render.i
 
 # target to preprocess a source file
-shader/shader_import.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/shader/shader_import.c.i
-.PHONY : shader/shader_import.c.i
+ccmedia/render/render.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.i
+.PHONY : ccmedia/render/render.cpp.i
 
-shader/shader_import.s: shader/shader_import.c.s
-.PHONY : shader/shader_import.s
+ccmedia/render/render.s: ccmedia/render/render.cpp.s
+.PHONY : ccmedia/render/render.s
 
 # target to generate assembly for a file
-shader/shader_import.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/shader/shader_import.c.s
-.PHONY : shader/shader_import.c.s
+ccmedia/render/render.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.s
+.PHONY : ccmedia/render/render.cpp.s
+
+ccmedia/render/shader_import.o: ccmedia/render/shader_import.c.o
+.PHONY : ccmedia/render/shader_import.o
+
+# target to build an object file
+ccmedia/render/shader_import.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o
+.PHONY : ccmedia/render/shader_import.c.o
+
+ccmedia/render/shader_import.i: ccmedia/render/shader_import.c.i
+.PHONY : ccmedia/render/shader_import.i
+
+# target to preprocess a source file
+ccmedia/render/shader_import.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.i
+.PHONY : ccmedia/render/shader_import.c.i
+
+ccmedia/render/shader_import.s: ccmedia/render/shader_import.c.s
+.PHONY : ccmedia/render/shader_import.s
+
+# target to generate assembly for a file
+ccmedia/render/shader_import.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.s
+.PHONY : ccmedia/render/shader_import.c.s
+
+ccmedia/render/video.o: ccmedia/render/video.cpp.o
+.PHONY : ccmedia/render/video.o
+
+# target to build an object file
+ccmedia/render/video.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o
+.PHONY : ccmedia/render/video.cpp.o
+
+ccmedia/render/video.i: ccmedia/render/video.cpp.i
+.PHONY : ccmedia/render/video.i
+
+# target to preprocess a source file
+ccmedia/render/video.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.i
+.PHONY : ccmedia/render/video.cpp.i
+
+ccmedia/render/video.s: ccmedia/render/video.cpp.s
+.PHONY : ccmedia/render/video.s
+
+# target to generate assembly for a file
+ccmedia/render/video.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.s
+.PHONY : ccmedia/render/video.cpp.s
 
 # Help Target
 help:
@@ -339,25 +387,31 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ccmedia"
-	@echo "... al/audio.o"
-	@echo "... al/audio.i"
-	@echo "... al/audio.s"
-	@echo "... gles/render.o"
-	@echo "... gles/render.i"
-	@echo "... gles/render.s"
-	@echo "... gles/video.o"
-	@echo "... gles/video.i"
-	@echo "... gles/video.s"
-	@echo "... ios/CCPlayer.o"
-	@echo "... player/format.o"
-	@echo "... player/format.i"
-	@echo "... player/format.s"
-	@echo "... player/player.o"
-	@echo "... player/player.i"
-	@echo "... player/player.s"
-	@echo "... shader/shader_import.o"
-	@echo "... shader/shader_import.i"
-	@echo "... shader/shader_import.s"
+	@echo "... ccmedia/encoder/encoder.o"
+	@echo "... ccmedia/encoder/encoder.i"
+	@echo "... ccmedia/encoder/encoder.s"
+	@echo "... ccmedia/encoder/writer.o"
+	@echo "... ccmedia/encoder/writer.i"
+	@echo "... ccmedia/encoder/writer.s"
+	@echo "... ccmedia/ios/CCPlayer.o"
+	@echo "... ccmedia/player/format.o"
+	@echo "... ccmedia/player/format.i"
+	@echo "... ccmedia/player/format.s"
+	@echo "... ccmedia/player/player.o"
+	@echo "... ccmedia/player/player.i"
+	@echo "... ccmedia/player/player.s"
+	@echo "... ccmedia/render/audio.o"
+	@echo "... ccmedia/render/audio.i"
+	@echo "... ccmedia/render/audio.s"
+	@echo "... ccmedia/render/render.o"
+	@echo "... ccmedia/render/render.i"
+	@echo "... ccmedia/render/render.s"
+	@echo "... ccmedia/render/shader_import.o"
+	@echo "... ccmedia/render/shader_import.i"
+	@echo "... ccmedia/render/shader_import.s"
+	@echo "... ccmedia/render/video.o"
+	@echo "... ccmedia/render/video.i"
+	@echo "... ccmedia/render/video.s"
 .PHONY : help
 
 

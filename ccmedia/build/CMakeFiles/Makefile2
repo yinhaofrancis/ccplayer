@@ -81,12 +81,12 @@ clean: CMakeFiles/ccmedia.dir/clean
 CMakeFiles/ccmedia.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ccmedia.dir/build.make CMakeFiles/ccmedia.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target ccmedia"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target ccmedia"
 .PHONY : CMakeFiles/ccmedia.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ccmedia.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ccmedia.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles 0
 .PHONY : CMakeFiles/ccmedia.dir/rule

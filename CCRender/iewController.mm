@@ -9,6 +9,8 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#include <ccmedia/encoder/encoder.hpp>
+#include <ccmedia/encoder/writer.hpp>
 @interface iewController ()
 @property (weak, nonatomic) IBOutlet UISlider *sliderview;
 @property (weak, nonatomic) IBOutlet UIButton *olayButton;

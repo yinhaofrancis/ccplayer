@@ -4,27 +4,27 @@
 # compile C with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 # compile OBJCXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
-C_DEFINES = -DAL_SILENCE_DEPRECATION -DGL_SILENCE_DEPRECATION
+C_DEFINES = -DAL_SILENCE_DEPRECATION -DGLES_SILENCE_DEPRECATION
 
-C_INCLUDES = -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../third_party/include -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/util -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/shader -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/al -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type.h -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios/CCPlayer.h
+C_INCLUDES = -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../third_party/include -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type.h -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/CCPlayer.h
 
-C_FLAGSarm64 = -target arm64-apple-ios12.0 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5
+C_FLAGSarm64 = -target arm64-apple-ios12.0 -g -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5
 
-C_FLAGS = -target arm64-apple-ios12.0 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5
+C_FLAGS = -target arm64-apple-ios12.0 -g -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5
 
-CXX_DEFINES = -DAL_SILENCE_DEPRECATION -DGL_SILENCE_DEPRECATION
+CXX_DEFINES = -DAL_SILENCE_DEPRECATION -DGLES_SILENCE_DEPRECATION
 
-CXX_INCLUDES = -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../third_party/include -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/util -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/shader -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/al -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type.h -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios/CCPlayer.h
+CXX_INCLUDES = -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../third_party/include -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type.h -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/CCPlayer.h
 
-CXX_FLAGSarm64 = -target arm64-apple-ios12.0 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5 -std=gnu++17
+CXX_FLAGSarm64 = -target arm64-apple-ios12.0 -g -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5 -std=gnu++17
 
-CXX_FLAGS = -target arm64-apple-ios12.0 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5 -std=gnu++17
+CXX_FLAGS = -target arm64-apple-ios12.0 -g -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5 -std=gnu++17
 
-OBJCXX_DEFINES = -DAL_SILENCE_DEPRECATION -DGL_SILENCE_DEPRECATION
+OBJCXX_DEFINES = -DAL_SILENCE_DEPRECATION -DGLES_SILENCE_DEPRECATION
 
-OBJCXX_INCLUDES = -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../third_party/include -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/util -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/shader -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/al -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type.h -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios/CCPlayer.h
+OBJCXX_INCLUDES = -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/../third_party/include -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/type.h -I/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/CCPlayer.h
 
-OBJCXX_FLAGSarm64 = -target arm64-apple-ios12.0 -fobjc-arc -fobjc-weak -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5 -std=gnu++17
+OBJCXX_FLAGSarm64 = -target arm64-apple-ios12.0 -fobjc-arc -fobjc-weak -g -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5 -std=gnu++17
 
-OBJCXX_FLAGS = -target arm64-apple-ios12.0 -fobjc-arc -fobjc-weak -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5 -std=gnu++17
+OBJCXX_FLAGS = -target arm64-apple-ios12.0 -fobjc-arc -fobjc-weak -g -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -mmacosx-version-min=13.5 -std=gnu++17
 

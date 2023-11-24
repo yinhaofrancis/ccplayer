@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.10)
 
 project(ccmedia VERSION 0.1.0 LANGUAGES C CXX OBJC OBJCXX)
 
+add_compile_definitions("GLES_SILENCE_DEPRECATION")
+
+add_compile_definitions("AL_SILENCE_DEPRECATION")
+
 set(CMAKE_SYSTEM_NAME iOS)
 
 set(CMAKE_SYSTEM_PROCESSOR aarch64)
@@ -18,21 +22,17 @@ set(CMAKE_IPHONEOS_DEPLOYMENT_TARGET 12.0)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_compile_definitions("GL_SILENCE_DEPRECATION")
-
-add_compile_definitions("AL_SILENCE_DEPRECATION")
-
 set(CMAKE_C_COMPILER ${TOOLCHAIN}/usr/bin/cc)
 
-set(CMAKE_C_FLAGS "-target arm64-apple-ios12.0")
+set(CMAKE_C_FLAGS "-target arm64-apple-ios12.0 -g")
 
 set(CMAKE_CXX_COMPILER ${TOOLCHAIN}/usr/bin/c++)
 
-set(CMAKE_CXX_FLAGS "-target arm64-apple-ios12.0")
+set(CMAKE_CXX_FLAGS "-target arm64-apple-ios12.0 -g")
 
 set(CMAKE_OBJCXX_COMPILER ${TOOLCHAIN}/usr/bin/c++)
 
-set(CMAKE_OBJCXX_FLAGS "-target arm64-apple-ios12.0 -fobjc-arc -fobjc-weak")
+set(CMAKE_OBJCXX_FLAGS "-target arm64-apple-ios12.0 -fobjc-arc -fobjc-weak -g")
 
 set(THIRD_PARTY ${CMAKE_CURRENT_SOURCE_DIR}/../third_party)
 
@@ -46,25 +46,19 @@ set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 
-add_library(ccmedia 
-player/player.cpp
-player/player.hpp
-player/format.cpp
-player/format.hpp
-type/type.h
-util/container.h
-util/cc_util.hpp
-shader/shader_import.h
-shader/shader_import.c
-ios/CCPlayer.h
-ios/CCPlayer.mm
-gles/render.cpp 
-gles/render.hpp 
-gles/video.cpp 
-gles/video.hpp 
-al/audio.hpp 
-al/audio.cpp
+
+set (SOURCES_ROOT ccmedia)
+
+file(GLOB_RECURSE SOURCE_FILES 
+"${SOURCES_ROOT}/*.h" 
+"${SOURCES_ROOT}/*.cpp"
+"${SOURCES_ROOT}/*.hpp"
+"${SOURCES_ROOT}/*.c"
+"${SOURCES_ROOT}/*.mm"
 )
+
+
+add_library(ccmedia  "${SOURCE_FILES}")
 
 list(APPEND EXTRA_LIBS 
     "-framework Foundation"
@@ -90,16 +84,8 @@ list(APPEND ALL_LINK
     bz2
     ${EXTRA_LIBS}
 )
-target_include_directories(ccmedia PRIVATE 
-${CMAKE_CURRENT_SOURCE_DIR}/type
-${CMAKE_CURRENT_SOURCE_DIR}/player
-${CMAKE_CURRENT_SOURCE_DIR}/util
-${CMAKE_CURRENT_SOURCE_DIR}/shader
-${CMAKE_CURRENT_SOURCE_DIR}/al 
-${CMAKE_CURRENT_SOURCE_DIR}/gles
-${CMAKE_CURRENT_SOURCE_DIR}/ios)
 
-target_include_directories(ccmedia PUBLIC "type.h" "ios/CCPlayer.h")
+target_include_directories(ccmedia PUBLIC "type.h" "CCPlayer.h")
 
 
 
@@ -109,11 +95,20 @@ install(TARGETS ccmedia
     ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
 )
 # Install the header files
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ios
+# install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ios
+#     DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+#     FILES_MATCHING PATTERN "*.h"
+# )
+# install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/type
+#     DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+#     FILES_MATCHING PATTERN "*.h"
+# )
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ccmedia
     DESTINATION ${CMAKE_INSTALL_PREFIX}/include
-    FILES_MATCHING PATTERN "*.h"
+    FILES_MATCHING PATTERN "*.hpp"
 )
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/type
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/ccmedia
     DESTINATION ${CMAKE_INSTALL_PREFIX}/include
     FILES_MATCHING PATTERN "*.h"
 )

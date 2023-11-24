@@ -69,127 +69,159 @@ include CMakeFiles/ccmedia.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ccmedia.dir/flags.make
 
-CMakeFiles/ccmedia.dir/player/player.cpp.o: CMakeFiles/ccmedia.dir/flags.make
-CMakeFiles/ccmedia.dir/player/player.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player/player.cpp
-CMakeFiles/ccmedia.dir/player/player.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ccmedia.dir/player/player.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/player/player.cpp.o -MF CMakeFiles/ccmedia.dir/player/player.cpp.o.d -o CMakeFiles/ccmedia.dir/player/player.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player/player.cpp
+CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o: CMakeFiles/ccmedia.dir/flags.make
+CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp
+CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o -MF CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o.d -o CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp
 
-CMakeFiles/ccmedia.dir/player/player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/player/player.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player/player.cpp > CMakeFiles/ccmedia.dir/player/player.cpp.i
+CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp > CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.i
 
-CMakeFiles/ccmedia.dir/player/player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/player/player.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player/player.cpp -o CMakeFiles/ccmedia.dir/player/player.cpp.s
+CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp -o CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.s
 
-CMakeFiles/ccmedia.dir/player/format.cpp.o: CMakeFiles/ccmedia.dir/flags.make
-CMakeFiles/ccmedia.dir/player/format.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player/format.cpp
-CMakeFiles/ccmedia.dir/player/format.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ccmedia.dir/player/format.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/player/format.cpp.o -MF CMakeFiles/ccmedia.dir/player/format.cpp.o.d -o CMakeFiles/ccmedia.dir/player/format.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player/format.cpp
+CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o: CMakeFiles/ccmedia.dir/flags.make
+CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/writer.cpp
+CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o -MF CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o.d -o CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/writer.cpp
 
-CMakeFiles/ccmedia.dir/player/format.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/player/format.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player/format.cpp > CMakeFiles/ccmedia.dir/player/format.cpp.i
+CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/writer.cpp > CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.i
 
-CMakeFiles/ccmedia.dir/player/format.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/player/format.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/player/format.cpp -o CMakeFiles/ccmedia.dir/player/format.cpp.s
+CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/writer.cpp -o CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.s
 
-CMakeFiles/ccmedia.dir/shader/shader_import.c.o: CMakeFiles/ccmedia.dir/flags.make
-CMakeFiles/ccmedia.dir/shader/shader_import.c.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/shader/shader_import.c
-CMakeFiles/ccmedia.dir/shader/shader_import.c.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ccmedia.dir/shader/shader_import.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/shader/shader_import.c.o -MF CMakeFiles/ccmedia.dir/shader/shader_import.c.o.d -o CMakeFiles/ccmedia.dir/shader/shader_import.c.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/shader/shader_import.c
+CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o: CMakeFiles/ccmedia.dir/flags.make
+CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/ios/CCPlayer.mm
+CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building OBJCXX object CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) -x objective-c++ $(OBJCXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o -MF CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o.d -o CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/ios/CCPlayer.mm
 
-CMakeFiles/ccmedia.dir/shader/shader_import.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ccmedia.dir/shader/shader_import.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/shader/shader_import.c > CMakeFiles/ccmedia.dir/shader/shader_import.c.i
+CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing OBJCXX source to CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/ios/CCPlayer.mm > CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.i
 
-CMakeFiles/ccmedia.dir/shader/shader_import.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ccmedia.dir/shader/shader_import.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/shader/shader_import.c -o CMakeFiles/ccmedia.dir/shader/shader_import.c.s
+CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling OBJCXX source to assembly CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/ios/CCPlayer.mm -o CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.s
 
-CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o: CMakeFiles/ccmedia.dir/flags.make
-CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios/CCPlayer.mm
-CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building OBJCXX object CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) -x objective-c++ $(OBJCXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o -MF CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o.d -o CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios/CCPlayer.mm
+CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o: CMakeFiles/ccmedia.dir/flags.make
+CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/player/format.cpp
+CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o -MF CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o.d -o CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/player/format.cpp
 
-CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing OBJCXX source to CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios/CCPlayer.mm > CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.i
+CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/player/format.cpp > CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.i
 
-CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling OBJCXX source to assembly CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios/CCPlayer.mm -o CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.s
+CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/player/format.cpp -o CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.s
 
-CMakeFiles/ccmedia.dir/gles/render.cpp.o: CMakeFiles/ccmedia.dir/flags.make
-CMakeFiles/ccmedia.dir/gles/render.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles/render.cpp
-CMakeFiles/ccmedia.dir/gles/render.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ccmedia.dir/gles/render.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/gles/render.cpp.o -MF CMakeFiles/ccmedia.dir/gles/render.cpp.o.d -o CMakeFiles/ccmedia.dir/gles/render.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles/render.cpp
+CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o: CMakeFiles/ccmedia.dir/flags.make
+CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/player/player.cpp
+CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o -MF CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o.d -o CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/player/player.cpp
 
-CMakeFiles/ccmedia.dir/gles/render.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/gles/render.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles/render.cpp > CMakeFiles/ccmedia.dir/gles/render.cpp.i
+CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/player/player.cpp > CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.i
 
-CMakeFiles/ccmedia.dir/gles/render.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/gles/render.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles/render.cpp -o CMakeFiles/ccmedia.dir/gles/render.cpp.s
+CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/player/player.cpp -o CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.s
 
-CMakeFiles/ccmedia.dir/gles/video.cpp.o: CMakeFiles/ccmedia.dir/flags.make
-CMakeFiles/ccmedia.dir/gles/video.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles/video.cpp
-CMakeFiles/ccmedia.dir/gles/video.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ccmedia.dir/gles/video.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/gles/video.cpp.o -MF CMakeFiles/ccmedia.dir/gles/video.cpp.o.d -o CMakeFiles/ccmedia.dir/gles/video.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles/video.cpp
+CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o: CMakeFiles/ccmedia.dir/flags.make
+CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/audio.cpp
+CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o -MF CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o.d -o CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/audio.cpp
 
-CMakeFiles/ccmedia.dir/gles/video.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/gles/video.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles/video.cpp > CMakeFiles/ccmedia.dir/gles/video.cpp.i
+CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/audio.cpp > CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.i
 
-CMakeFiles/ccmedia.dir/gles/video.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/gles/video.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/gles/video.cpp -o CMakeFiles/ccmedia.dir/gles/video.cpp.s
+CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/audio.cpp -o CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.s
 
-CMakeFiles/ccmedia.dir/al/audio.cpp.o: CMakeFiles/ccmedia.dir/flags.make
-CMakeFiles/ccmedia.dir/al/audio.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/al/audio.cpp
-CMakeFiles/ccmedia.dir/al/audio.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ccmedia.dir/al/audio.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/al/audio.cpp.o -MF CMakeFiles/ccmedia.dir/al/audio.cpp.o.d -o CMakeFiles/ccmedia.dir/al/audio.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/al/audio.cpp
+CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o: CMakeFiles/ccmedia.dir/flags.make
+CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/render.cpp
+CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o -MF CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o.d -o CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/render.cpp
 
-CMakeFiles/ccmedia.dir/al/audio.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/al/audio.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/al/audio.cpp > CMakeFiles/ccmedia.dir/al/audio.cpp.i
+CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/render.cpp > CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.i
 
-CMakeFiles/ccmedia.dir/al/audio.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/al/audio.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/al/audio.cpp -o CMakeFiles/ccmedia.dir/al/audio.cpp.s
+CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/render.cpp -o CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.s
+
+CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o: CMakeFiles/ccmedia.dir/flags.make
+CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/shader_import.c
+CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o -MF CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o.d -o CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/shader_import.c
+
+CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/shader_import.c > CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.i
+
+CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/shader_import.c -o CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.s
+
+CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o: CMakeFiles/ccmedia.dir/flags.make
+CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o: /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/video.cpp
+CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o: CMakeFiles/ccmedia.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o -MF CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o.d -o CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o -c /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/video.cpp
+
+CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/video.cpp > CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.i
+
+CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/render/video.cpp -o CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.s
 
 # Object files for target ccmedia
 ccmedia_OBJECTS = \
-"CMakeFiles/ccmedia.dir/player/player.cpp.o" \
-"CMakeFiles/ccmedia.dir/player/format.cpp.o" \
-"CMakeFiles/ccmedia.dir/shader/shader_import.c.o" \
-"CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o" \
-"CMakeFiles/ccmedia.dir/gles/render.cpp.o" \
-"CMakeFiles/ccmedia.dir/gles/video.cpp.o" \
-"CMakeFiles/ccmedia.dir/al/audio.cpp.o"
+"CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o" \
+"CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o" \
+"CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o" \
+"CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o" \
+"CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o" \
+"CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o" \
+"CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o" \
+"CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o" \
+"CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o"
 
 # External object files for target ccmedia
 ccmedia_EXTERNAL_OBJECTS =
 
-libccmedia.a: CMakeFiles/ccmedia.dir/player/player.cpp.o
-libccmedia.a: CMakeFiles/ccmedia.dir/player/format.cpp.o
-libccmedia.a: CMakeFiles/ccmedia.dir/shader/shader_import.c.o
-libccmedia.a: CMakeFiles/ccmedia.dir/ios/CCPlayer.mm.o
-libccmedia.a: CMakeFiles/ccmedia.dir/gles/render.cpp.o
-libccmedia.a: CMakeFiles/ccmedia.dir/gles/video.cpp.o
-libccmedia.a: CMakeFiles/ccmedia.dir/al/audio.cpp.o
+libccmedia.a: CMakeFiles/ccmedia.dir/ccmedia/encoder/encoder.cpp.o
+libccmedia.a: CMakeFiles/ccmedia.dir/ccmedia/encoder/writer.cpp.o
+libccmedia.a: CMakeFiles/ccmedia.dir/ccmedia/ios/CCPlayer.mm.o
+libccmedia.a: CMakeFiles/ccmedia.dir/ccmedia/player/format.cpp.o
+libccmedia.a: CMakeFiles/ccmedia.dir/ccmedia/player/player.cpp.o
+libccmedia.a: CMakeFiles/ccmedia.dir/ccmedia/render/audio.cpp.o
+libccmedia.a: CMakeFiles/ccmedia.dir/ccmedia/render/render.cpp.o
+libccmedia.a: CMakeFiles/ccmedia.dir/ccmedia/render/shader_import.c.o
+libccmedia.a: CMakeFiles/ccmedia.dir/ccmedia/render/video.cpp.o
 libccmedia.a: CMakeFiles/ccmedia.dir/build.make
 libccmedia.a: CMakeFiles/ccmedia.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libccmedia.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libccmedia.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ccmedia.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ccmedia.dir/link.txt --verbose=$(VERBOSE)
 
