@@ -124,19 +124,25 @@ format::codec::~codec(){
 AVPacket* format::read(){
     
     auto packet = av_packet_alloc();
+    try
+    {
+        read(packet);
+        return packet;
+    }
+    catch(error e)
+    {
+        av_packet_free(&packet);
+        throw e;
+    }
+}
+void format::read(AVPacket* packet){
     read_lock.lock();
     int err = av_read_frame(m_format_ctx, packet);
     read_lock.unlock();
-    if(err == 0){
-        return packet;
-    }
     throw error(err);
-    
 }
-
 void format::decode_video_core(AVFrame *frame, AVPacket *packet) {
     int err = avcodec_send_packet(m_video_codec.p_ctx, packet);
-    av_packet_free(&packet);
     if (err != 0){
         throw error(err);
     }
@@ -148,7 +154,6 @@ void format::decode_video_core(AVFrame *frame, AVPacket *packet) {
 
 void format::decode_audio_core(AVFrame *frame, AVPacket *packet) {
     int err = avcodec_send_packet(m_audio_codec.p_ctx, packet);
-    av_packet_free(&packet);
     if (err != 0){
         throw error(err);
     }

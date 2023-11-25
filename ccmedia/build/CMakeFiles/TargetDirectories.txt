@@ -1,7 +1,0 @@
-/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles/ccmedia.dir
-/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles/edit_cache.dir
-/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles/rebuild_cache.dir
-/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles/list_install_components.dir
-/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles/install.dir
-/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles/install/local.dir
-/Users/haoyin/Documents/GitHub/ccplayer/ccmedia/build/CMakeFiles/install/strip.dir

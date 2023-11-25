@@ -96,8 +96,11 @@ public:
     void decode_video_core(AVFrame *frame, AVPacket *packet);
     
     void decode_audio_core(AVFrame *frame, AVPacket *packet);
-    AVPacket* read();
     
+    AVPacket* read();
+
+    void read(AVPacket* packet);
+
     friend class player;
     
 };

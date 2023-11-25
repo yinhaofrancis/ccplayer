@@ -7,6 +7,11 @@ using namespace cc;
 encoder::encoder(AVCodecID codec_id,AVPixelFormat pixel_fmt, int width, int height,int gop,int max_b_frames,int fps)
 {
     this->m_codec = avcodec_find_encoder(codec_id);
+    if(this->m_codec == nullptr){
+        throw(cc::error(
+            "can't find codec id",0
+        ));
+    }
     this->m_codec_ctx = avcodec_alloc_context3(this->m_codec);
     this->m_codec_ctx->width = width;
     this->m_codec_ctx->height = height;
@@ -17,6 +22,11 @@ encoder::encoder(AVCodecID codec_id,AVPixelFormat pixel_fmt, int width, int heig
 }
 encoder::encoder(AVCodecID codec_id,AVSampleFormat sample_fmt,int channel,int sample_rate){
     this->m_codec = avcodec_find_encoder(codec_id);
+    if(this->m_codec == nullptr){
+        throw(cc::error(
+            "can't find codec id",0
+        ));
+    }
     this->m_codec_ctx = avcodec_alloc_context3(this->m_codec);
     this->m_codec_ctx->codec_id = codec_id;
     this->m_codec_ctx->sample_fmt = sample_fmt;

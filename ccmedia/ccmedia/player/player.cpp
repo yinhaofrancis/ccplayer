@@ -146,7 +146,9 @@ void player::decode_video(runner<player,true>& r){
         auto packet = m_queue_video_packet.dequeue();
         try {
             m_format.decode_video_core(frame, packet);
+            av_packet_free(&packet);
         } catch (error e) {
+            av_packet_free(&packet);
             r.sleep_millisec(1);
             continue;
         }
@@ -196,7 +198,9 @@ void player::decode_audio(runner<player,true>& r){
         
         try {
             m_format.decode_audio_core(frame, packet);
+            av_packet_free(&packet);
         } catch (error e) {
+            av_packet_free(&packet);
             r.sleep_millisec(1);
             continue;
         }

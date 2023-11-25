@@ -11,9 +11,10 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #include <ccmedia/encoder/encoder.hpp>
 #include <ccmedia/encoder/writer.hpp>
+#include <ccmedia/player/format.hpp>
 @interface iewController ()
 @property (weak, nonatomic) IBOutlet UISlider *sliderview;
-@property (weak, nonatomic) IBOutlet UIButton *olayButton;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
 
 @property (weak, nonatomic) IBOutlet UIView *widgetview;
 
@@ -30,10 +31,8 @@
     id  sharedObject = [objc_lookUpClass("AVAudioSession") performSelector:sel_getUid("sharedInstance")];
         [sharedObject performSelector:sel_getUid("setActive:error:") withObject:@true withObject:nil];
 
+ 
 
-//    auto a = "/Users/haoyin/Desktop/gamesci_2022PV03.mp4";
-    
-    
 //    _player->play();
     __weak iewController *ws = self;
     self.render = [[CCPlayer alloc] initWithUrl:_u];
@@ -41,7 +40,7 @@
 //    self.render.layer.backgroundColor = UIColor.redColor;
     self.render.observerTime = ^(double f) {
         ws.sliderview.value = f;
-        ws.olayButton.selected = ws.render.state == player_state_playing;
+        ws.playButton.selected = ws.render.state == player_state_playing;
         if(!CGRectEqualToRect(ws.render.layer.frame, ws.view.bounds)){
             ws.render.layer.frame = ws.view.bounds;
         }
@@ -77,6 +76,7 @@
     [self.render play];
 }
 
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.render.layer.frame = self.view.bounds;
@@ -106,12 +106,16 @@
 }
 - (void)dealloc{
     [self.render stop];
+
 }
 
 @end
 
 
-@interface tempController ()<UITextFieldDelegate>
+@interface tempController ()<UITextFieldDelegate>{
+    cc::writer *w;
+    cc::format *f;
+}
 
 @end
 
@@ -119,6 +123,9 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    w = new cc::writer("/Users/haoyin/Desktop/g.mp4");
+    
+    
     
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -129,16 +136,12 @@
     }
     return false;
 }
-- (void)goGallery{
-//    UIImagePickerController* pick = [[UIImagePickerController alloc] init];
-//    pick.delegate = self;
-//    pick.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-//    pick.mediaTypes = @[(id)kUTTypeMovie];
-//    pick.allowsEditing = false;
-//    [self showViewController:pick sender:nil];
-    
-    
+
+- (IBAction)exportj:(id)sender {
+    auto a = "/Users/haoyin/Desktop/gamesci_2022PV03.mp4";
+    w->transform(a);
 }
+
 - (IBAction)goExploer{
     UIDocumentPickerViewController* pick = [[UIDocumentPickerViewController alloc]
                                             initWithDocumentTypes:@[@"public.movie"] inMode:UIDocumentPickerModeImport];
@@ -165,6 +168,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     iewController* dest = segue.destinationViewController;
     dest.u = sender;
+}
+- (void)dealloc
+{
+    delete w;
+    delete f;
 }
 
 @end
