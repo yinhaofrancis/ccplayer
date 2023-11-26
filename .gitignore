@@ -32,3 +32,6 @@
 *.app
 
 /third_party
+/third_party_mac
+/export
+

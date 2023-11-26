@@ -30,111 +30,103 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "641F74A8-86D6-4399-A21A-F29CCFBC0601"
+            uuid = "C2A8CADA-5A4A-4472-9DD0-BCA6E26AA386"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ccmedia/ccmedia/encoder/encoder.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "encoder::codec_flags()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "641F74A8-86D6-4399-A21A-F29CCFBC0601 - c840772a8976d66b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "cc::encoder::open()"
-                  moduleName = "CCRender"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "641F74A8-86D6-4399-A21A-F29CCFBC0601 - ee46d9a9bea53e28"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "cc::encoder::codec_flags()"
-                  moduleName = "CCRender"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8BF9D1CE-6249-43D1-AB26-E07CBA1283F3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ccmedia/ccmedia/encoder/writer.cpp"
+            filePath = "ccmedia/core/encoder/writer.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "4"
             endingLineNumber = "4"
             landmarkName = "cc::writer::writer(path)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C2A8CADA-5A4A-4472-9DD0-BCA6E26AA386 - e44781c42f7f6c79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cc::writer::writer(char const*)"
+                  moduleName = "CCRender"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/core/encoder/writer.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "4"
+                  endingLineNumber = "4"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "C2A8CADA-5A4A-4472-9DD0-BCA6E26AA386 - e44781c42f7f6c79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cc::writer::writer(char const*)"
+                  moduleName = "CCRender"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/core/encoder/writer.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "4"
+                  endingLineNumber = "4"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            uuid = "2D1C6767-45B2-40BF-B5C3-E963D686F2DB"
+            uuid = "E2E116E9-0015-4525-9462-0E416AE92338"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "decode_video_core"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "E2E116E9-0015-4525-9462-0E416AE92338 - 29754b0c59b5e39d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cc::format::decode_video_core(AVFrame*, AVPacket*)"
+                  moduleName = "CCRender"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/core/player/format.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "EFE653A3-A237-4197-B549-C762159FC4D5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ccmedia/ccmedia/encoder/encoder.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "9"
-            endingLineNumber = "9"
-            landmarkName = "encoder::encoder(codec_id, pixel_fmt, width, height, gop, max_b_frames, fps)"
-            landmarkType = "7">
+            symbolName = "[CCPlayer initWithUrl:]"
+            moduleName = "">
             <Locations>
                <Location
-                  uuid = "2D1C6767-45B2-40BF-B5C3-E963D686F2DB - bff823fc3ccc93de"
+                  uuid = "EFE653A3-A237-4197-B549-C762159FC4D5 - b64acf88299afcc8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "cc::encoder::encoder(AVCodecID, AVPixelFormat, int, int, int, int, int)"
+                  symbolName = "-[CCPlayer initWithUrl:]"
                   moduleName = "CCRender"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ios/CCPlayer.mm"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "9"
-                  endingLineNumber = "9"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  uuid = "2D1C6767-45B2-40BF-B5C3-E963D686F2DB - bff823fc3ccc93de"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "cc::encoder::encoder(AVCodecID, AVPixelFormat, int, int, int, int, int)"
-                  moduleName = "CCRender"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "9"
-                  endingLineNumber = "9"
-                  offsetFromSymbolStart = "89">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "60">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -142,62 +134,143 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "38717F43-95B3-4B82-A362-F4F7914B6A54"
+            uuid = "E1AA9F53-E2BA-4E3F-8022-EAEB93767CC4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ccmedia/ccmedia/encoder/encoder.cpp"
+            filePath = "ccmedia/core/player/player.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "encoder::encoder(codec_id, pixel_fmt, width, height, gop, max_b_frames, fps)"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "player::decode_video(r)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "38717F43-95B3-4B82-A362-F4F7914B6A54 - 44efc34f23e3737b"
+                  uuid = "E1AA9F53-E2BA-4E3F-8022-EAEB93767CC4 - bd5be6a34128134f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "cc::encoder::encoder(AVCodecID, AVSampleFormat, int, int)"
+                  symbolName = "cc::player::decode_video(cc::runner&lt;cc::player, true&gt;&amp;)"
                   moduleName = "CCRender"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/core/player/player.cpp"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "76">
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "412">
                </Location>
                <Location
-                  uuid = "38717F43-95B3-4B82-A362-F4F7914B6A54 - bff823fc3ccc9181"
+                  uuid = "E1AA9F53-E2BA-4E3F-8022-EAEB93767CC4 - bd5be6a34128134f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "cc::encoder::encoder(AVCodecID, AVPixelFormat, int, int, int, int, int)"
+                  symbolName = "cc::player::decode_video(cc::runner&lt;cc::player, true&gt;&amp;)"
                   moduleName = "CCRender"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/core/player/player.cpp"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "223">
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "416">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9EA69A4-615F-4E73-A066-69FD53C8925B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ccmedia/core/player/player.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "player::decode_video(r)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A9EA69A4-615F-4E73-A066-69FD53C8925B - bd5be6a341281201"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cc::player::decode_video(cc::runner&lt;cc::player, true&gt;&amp;)"
+                  moduleName = "CCRender"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/core/player/player.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "528">
                </Location>
                <Location
-                  uuid = "38717F43-95B3-4B82-A362-F4F7914B6A54 - bff823fc3ccc9181"
+                  uuid = "A9EA69A4-615F-4E73-A066-69FD53C8925B - bd5be6a341281201"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "cc::encoder::encoder(AVCodecID, AVPixelFormat, int, int, int, int, int)"
+                  symbolName = "cc::player::decode_video(cc::runner&lt;cc::player, true&gt;&amp;)"
                   moduleName = "CCRender"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/ccmedia/encoder/encoder.cpp"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/core/player/player.cpp"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "76">
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "548">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DFA0C69C-F992-4A87-906E-2C3CD7EDF35A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ccmedia/core/player/player.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "player::decode_video(r)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DFA0C69C-F992-4A87-906E-2C3CD7EDF35A - bd5be6a341281247"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cc::player::decode_video(cc::runner&lt;cc::player, true&gt;&amp;)"
+                  moduleName = "CCRender"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/core/player/player.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "560">
+               </Location>
+               <Location
+                  uuid = "DFA0C69C-F992-4A87-906E-2C3CD7EDF35A - bd5be6a341281247"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cc::player::decode_video(cc::runner&lt;cc::player, true&gt;&amp;)"
+                  moduleName = "CCRender"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/haoyin/Documents/GitHub/ccplayer/ccmedia/core/player/player.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "568">
                </Location>
             </Locations>
          </BreakpointContent>

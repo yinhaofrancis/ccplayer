@@ -9,9 +9,9 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#include <ccmedia/encoder/encoder.hpp>
-#include <ccmedia/encoder/writer.hpp>
-#include <ccmedia/player/format.hpp>
+#include <encoder/encoder.hpp>
+#include <encoder/writer.hpp>
+#include <player/format.hpp>
 @interface iewController ()
 @property (weak, nonatomic) IBOutlet UISlider *sliderview;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
@@ -123,9 +123,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    w = new cc::writer("/Users/haoyin/Desktop/g.mp4");
-    
-    
     
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{

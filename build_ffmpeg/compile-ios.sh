@@ -59,7 +59,8 @@ CONFIG="$CONFIG --enable-static "
 CONFIG="$CONFIG --disable-shared "
 CONFIG="$CONFIG --enable-pic "
 CONFIG="$CONFIG --enable-neon "
-
+CONFIG="$CONFIG --disable-videotoolbox "
+CONFIG="$CONFIG --disable-audiotoolbox "
 
 
 if [ "$1" = "DEBUG" ]; then
