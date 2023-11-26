@@ -20,6 +20,7 @@ encoder::encoder(AVCodecID codec_id,AVPixelFormat pixel_fmt, int width, int heig
     this->m_codec_ctx->codec_id = codec_id;
     this->m_codec_ctx->gop_size = gop;
     this->m_codec_ctx->max_b_frames = max_b_frames;
+    this->m_codec_ctx->time_base = (AVRational){1,fps};
 }
 encoder::encoder(AVCodecID codec_id,AVSampleFormat sample_fmt,int channel,int sample_rate){
     this->m_codec = avcodec_find_encoder(codec_id);
@@ -33,6 +34,7 @@ encoder::encoder(AVCodecID codec_id,AVSampleFormat sample_fmt,int channel,int sa
     this->m_codec_ctx->sample_fmt = sample_fmt;
     this->m_codec_ctx->channels = channel;
     this->m_codec_ctx->channel_layout = av_get_default_channel_layout(channel);
+    this->m_codec_ctx->time_base = (AVRational){1,sample_rate};
 }
 encoder::encoder(encoder &n)
 {
