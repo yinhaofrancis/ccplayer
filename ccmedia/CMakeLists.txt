@@ -4,7 +4,7 @@ project(ccmedia_program VERSION 0.1.0 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(PLATFORM "macos" CACHE INTERNAL "")
+set(PLATFORM "iphone" CACHE INTERNAL "")
 
 set(THIRD_PARTY ${CMAKE_CURRENT_SOURCE_DIR}/../third_party_mac )
 
@@ -48,12 +48,12 @@ list(APPEND ALL_LINK
 
 
 
-add_executable(ccmedia main.cpp)
-target_link_libraries(
-    ccmedia 
-    ccmedia_core
-    ${ALL_LINK}
-    )
+# add_executable(ccmedia main.cpp)
+# target_link_libraries(
+#     ccmedia 
+#     ccmedia_core
+#     ${ALL_LINK}
+#     )
 
 
 

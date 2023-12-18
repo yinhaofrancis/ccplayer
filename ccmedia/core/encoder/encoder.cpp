@@ -33,6 +33,7 @@ encoder::encoder(AVCodecID codec_id,AVSampleFormat sample_fmt,int channel,int sa
     this->m_codec_ctx->codec_id = codec_id;
     this->m_codec_ctx->sample_fmt = sample_fmt;
     this->m_codec_ctx->channels = channel;
+    this->m_codec_ctx->sample_rate = sample_rate;
     this->m_codec_ctx->channel_layout = av_get_default_channel_layout(channel);
     this->m_codec_ctx->time_base = (AVRational){1,sample_rate};
 }

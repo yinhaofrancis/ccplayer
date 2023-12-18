@@ -23,8 +23,11 @@ namespace cc
         AVFormatContext *m_format_ctx;
         encoder m_video_encoder;
         encoder m_audio_encoder;
+        const char* m_path;
 
         runner<writer, true> *transform_runner;
+
+        unsigned long get_current_tick();
 
         void transform_run(runner<writer, true>& r,const char *from);
     };

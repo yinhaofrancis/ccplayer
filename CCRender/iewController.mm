@@ -9,9 +9,9 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#include <encoder/encoder.hpp>
-#include <encoder/writer.hpp>
-#include <player/format.hpp>
+//#include <core/encoder/encoder.hpp>
+//#include <core/encoder/writer.hpp>
+//#include <core/player/format.hpp>
 @interface iewController ()
 @property (weak, nonatomic) IBOutlet UISlider *sliderview;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
@@ -113,8 +113,8 @@
 
 
 @interface tempController ()<UITextFieldDelegate>{
-    cc::writer *w;
-    cc::format *f;
+//    cc::writer *w;
+//    cc::format *f;
 }
 
 @end
@@ -136,7 +136,7 @@
 
 - (IBAction)exportj:(id)sender {
     auto a = "/Users/haoyin/Desktop/gamesci_2022PV03.mp4";
-    w->transform(a);
+//    w->transform(a);
 }
 
 - (IBAction)goExploer{
@@ -166,10 +166,10 @@
     iewController* dest = segue.destinationViewController;
     dest.u = sender;
 }
-- (void)dealloc
-{
-    delete w;
-    delete f;
-}
+//- (void)dealloc
+//{
+//    delete w;
+//    delete f;
+//}
 
 @end
